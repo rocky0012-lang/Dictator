@@ -63,16 +63,17 @@ canvas.height = window.innerHeight;
 const signupForm = document.getElementById("form-signup");
 
 signupForm.addEventListener("submit", function (e) {
-e.preventDefault(); // Prevent page reload
+  e.preventDefault();
 
-const name = document.getElementById("signup-name").value;
 const email = document.getElementById("signup-email").value;
 const password = document.getElementById("signup-password").value;
 
-console.log("Sign Up Info:");
-console.log("Name:", name);
-console.log("Email:", email);
-console.log("Password:", password);
-
- // You can now send this data to a backend using fetch/AJAX
+firebase.auth().createUserWithEmailAndPassword(email, password)
+.then((userCredential) => {
+const user = userCredential.user;
+alert("Signup successful! Welcome " + user.email);
+})
+.catch((error) => {
+alert("Error: " + error.message);
+});
 });
