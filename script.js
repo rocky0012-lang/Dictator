@@ -77,3 +77,22 @@ alert("Signup successful! Welcome " + user.email);
 alert("Error: " + error.message);
 });
 });
+
+const loginForm = document.getElementById("form-login");
+
+loginForm.addEventListener("submit", function (e) {
+e.preventDefault();
+
+const email = document.getElementById("login-email").value;
+const password = document.getElementById("login-password").value;
+
+firebase.auth().signInWithEmailAndPassword(email, password)
+.then((userCredential) => {
+const user = userCredential.user;
+// ✅ Redirect to dashboard
+window.location.href = "dashboard.html";
+})
+.catch((error) => {
+alert("Login failed: " + error.message);
+});
+});
