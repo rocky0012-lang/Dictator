@@ -1,0 +1,129 @@
+body {
+      margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+          background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            height: 100vh;
+              display: flex;
+                align-items: center;
+                  justify-content: center;
+                  }
+
+                  .btn-open {
+                    padding: 12px 24px;
+                      font-size: 1rem;
+                        border: none;
+                          border-radius: 8px;
+                            background: #00c6ff;
+                              color: white;
+                                cursor: pointer;
+                                  transition: 0.3s;
+                                  }
+
+                                  .btn-open:hover {
+                                    background: #0072ff;
+                                    }
+
+                                    .modal {
+                                      position: fixed;
+                                        top: 0; left: 0; right: 0; bottom: 0;
+                                          display: none;
+                                            justify-content: center;
+                                              align-items: center;
+                                                background-color: rgba(0, 0, 0, 0.6);
+                                                  z-index: 10;
+                                                  }
+
+                                                  .modal.active {
+                                                    display: flex;
+                                                    }
+
+                                                    .modal-content {
+                                                      background: rgba(255, 255, 255, 0.05);
+                                                        border-radius: 16px;
+                                                          padding: 30px;
+                                                            width: 300px;
+                                                              backdrop-filter: blur(10px);
+                                                                box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+                                                                  color: white;
+                                                                    position: relative;
+                                                                    }
+
+                                                                    .tabs {
+                                                                      display: flex;
+                                                                        justify-content: space-around;
+                                                                          margin-bottom: 20px;
+                                                                          }
+
+                                                                          .tabs button {
+                                                                            flex: 1;
+                                                                              padding: 10px;
+                                                                                background: transparent;
+                                                                                  border: none;
+                                                                                    color: white;
+                                                                                      font-weight: bold;
+                                                                                        border-bottom: 2px solid transparent;
+                                                                                          cursor: pointer;
+                                                                                            transition: 0.3s;
+                                                                                            }
+
+                                                                                            .tabs button.active {
+                                                                                              border-bottom: 2px solid #00c6ff;
+                                                                                              }
+
+                                                                                              .form {
+                                                                                                display: none;
+                                                                                                }
+
+                                                                                                .form.active {
+                                                                                                  display: block;
+                                                                                                  }
+
+                                                                                                  input {
+                                                                                                    width: 100%;
+                                                                                                      padding: 10px;
+                                                                                                        margin: 10px 0;
+                                                                                                          background: rgba(255, 255, 255, 0.1);
+                                                                                                            border: none;
+                                                                                                              color: white;
+                                                                                                                border-radius: 8px;
+                                                                                                                }
+
+                                                                                                                .btn-submit {
+                                                                                                                  width: 100%;
+                                                                                                                    padding: 10px;
+                                                                                                                      background: #00c6ff;
+                                                                                                                        border: none;
+                                                                                                                          color: white;
+                                                                                                                            border-radius: 8px;
+                                                                                                                              cursor: pointer;
+                                                                                                                                transition: 0.3s;
+                                                                                                                                }
+
+                                                                                                                                .btn-submit:hover {
+                                                                                                                                  background: #0072ff;
+                                                                                                                                  }
+
+                                                                                                                                  .btn-close {
+                                                                                                                                    position: absolute;
+                                                                                                                                      top: 10px;
+                                                                                                                                        right: 15px;
+                                                                                                                                          font-size: 18px;
+                                                                                                                                            color: #aaa;
+                                                                                                                                              background: none;
+                                                                                                                                                border: none;
+                                                                                                                                                  cursor: pointer;
+                                                                                                                                                  }
+
+                                                                                                                                                  .btn-close:hover {
+                                                                                                                                                    color: #fff;
+                                                                                                                                                    }
+ #hackerCanvas {
+      position: fixed;
+        top: 0;
+          left: 0;
+            z-index: -1;
+              width: 100vw;
+                height: 100vh;
+                  background: black;
+                  }
+ }
